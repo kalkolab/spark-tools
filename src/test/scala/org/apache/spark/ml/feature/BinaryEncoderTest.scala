@@ -6,7 +6,6 @@ import org.apache.spark.ml.linalg.{Vector, Vectors}
 import org.apache.spark.sql.Row
 import org.apache.spark.sql.functions.col
 import org.apache.spark.sql.types.{IntegerType, StringType}
-import org.scalactic.TolerantNumerics
 import org.scalatest.FunSuite
 
 class BinaryEncoderTest extends FunSuite with DataFrameSuiteBase {
@@ -14,7 +13,6 @@ class BinaryEncoderTest extends FunSuite with DataFrameSuiteBase {
   override def enableHiveSupport: Boolean = false
   override def reuseContextIfPossible: Boolean = true
   import spark.implicits._
-  implicit val doubleEq = TolerantNumerics.tolerantDoubleEquality(1e-3)
 
   val columns = Array("string", "ordinal", "label")
   val outputCol = "binEnc"
