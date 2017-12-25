@@ -1,5 +1,9 @@
+organization := "me.kalko.lab"
 name := "spark-tools"
 version := "0.1"
+licenses := Seq("Apache 2.0 License" -> url("http://www.apache.org/licenses/LICENSE-2.0.html"))
+homepage := Some(url("https://github.com/kalkolab/spark-tools"))
+
 scalaVersion := "2.11.12"
 
 val sparkVersion = "2.2.0"
